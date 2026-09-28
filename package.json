@@ -1,0 +1,17 @@
+{
+  "name": "portfolio-ilyes-hamouchti",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio personnel avec composants React et contenu HTML directement modifiable",
+  "scripts": {
+    "vendor": "node scripts/build-react.cjs",
+    "check": "node --check js/navigation.js && node --check js/animations.js && node --check js/theme.js"
+  },
+  "dependencies": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

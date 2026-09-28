@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Présentation du projet Simmu-Impôt : une interface de simulation et un calcul progressif en JavaScript.">
+  <title>Simmu-Impôt — Ilyes Hamouchti</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <script src="js/theme.js?v=jour-nuit-1"></script>
+  <link rel="stylesheet" href="css/style.css?v=jour-nuit-1">
+  <link rel="stylesheet" href="css/animations.css?v=jour-nuit-1">
+  <link rel="stylesheet" href="css/theme.css?v=jour-nuit-1">
+  <script src="js/vendor/react-portfolio.js" defer></script>
+  <script src="js/animations.js?v=jour-nuit-1" defer></script>
+  <script src="js/navigation.js?v=jour-nuit-1" defer></script>
+</head>
+<body>
+  <a class="aller-contenu" href="#contenu">Aller au contenu</a>
+  <header class="entete">
+    <nav class="navigation conteneur" aria-label="Navigation principale">
+      <a class="logo" href="index.html" aria-label="Ilyes Hamouchti, accueil">IH<span>.</span></a>
+      <div class="commandes-navigation">
+        <button class="bouton-mouvement" type="button" hidden aria-label="Mettre les animations en pause">Animations Ⅱ</button>
+        <button class="menu-bouton" type="button" aria-controls="menu-principal" aria-expanded="false" hidden>Menu</button>
+      </div>
+      <ul class="liens-navigation" id="menu-principal">
+        <li><a href="index.html#a-propos">À propos</a></li>
+        <li><a href="index.html#parcours">Parcours</a></li>
+        <li><a href="index.html#competences">Compétences</a></li>
+        <li><a href="index.html#projets">Projets</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="index.html#contact">Contact <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu" class="conteneur" tabindex="-1">
+
+    <nav class="fil-ariane" aria-label="Fil d’Ariane"><a href="index.html#projets">← Retour aux projets</a></nav>
+    <header class="page-intro"><p class="repere">Projet 01 / Application web</p><h1>Simmu-Impôt</h1><p>Passer d’une saisie de revenu à un résultat détaillé, avec une interface et un calcul exécutés dans le navigateur.</p><ul class="technologies" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></header>
+    <figure class="grand-visuel"><img src="assets/images/simmu-impot.png" width="1265" height="712" alt="Le formulaire de Simmu-Impôt avec le choix mensuel ou annuel, le salaire et les parts fiscales"><figcaption>Capture du projet fourni, réalisée le 16 septembre 2026.</figcaption></figure>
+    <div class="fiche-grille">
+      <section><h2>L’objectif</h2><p>Proposer une interface de simulation de l’impôt sur le revenu. L’utilisateur choisit une période, saisit un salaire et ajuste le nombre de parts fiscales avant de lancer le calcul.</p><p>Le code fourni présente un barème daté de 2024. Le projet est présenté ici comme un exercice de développement.</p></section>
+      <section><h2>Ce que fait l’interface</h2><ul><li>Passage d’une saisie mensuelle à une saisie annuelle.</li><li>Modification des parts fiscales par pas de 0,5, entre 1 et 10.</li><li>Vérification qu’un salaire positif a été renseigné.</li><li>Affichage du détail du calcul et d’une barre de taux effectif.</li></ul></section>
+      <section><h2>Comment le code est organisé</h2><p><code>index.html</code> contient les champs et les zones de résultat. <code>style.css</code> met en forme l’interface. <code>script.js</code> réagit aux boutons et met à jour le texte des résultats.</p><p>La fonction de calcul parcourt un tableau de tranches. Pour chacune, elle applique le taux à la partie du revenu concernée. Le calcul et l’affichage sont répartis entre plusieurs fonctions courtes.</p></section>
+      <section><h2>Les limites du prototype</h2><p>Le modèle simplifie la situation fiscale et utilise un barème ancien. Le revenu brut saisi n’est pas, à lui seul, une base suffisante pour calculer un impôt réel. Les emplacements publicitaires visibles font partie de la maquette.</p><p>Cette fiche décrit le fonctionnement du projet ; elle ne constitue pas une validation du calcul fiscal.</p></section>
+      <section><h2>Contexte et contribution</h2><p class="brouillon">À compléter avec la période du projet, son contexte et ma contribution personnelle.</p></section>
+      <section><h2>Difficultés et apprentissages</h2><p class="brouillon">À compléter avec une difficulté réellement rencontrée et ce que j’ai appris en la résolvant.</p></section>
+    </div>
+    <div class="encadre"><p>Le dépôt et une éventuelle démonstration publique seront ajoutés lorsqu’un lien sera disponible.</p></div>
+    <div class="boutons navigation-projets"><a class="bouton" href="index.html#projets">← Tous les projets</a><a class="bouton" href="projet-eyes-contact.html">Projet suivant <span aria-hidden="true">→</span></a></div>
+
+  </main>
+  <footer class="pied-page"><div class="pied-interieur conteneur"><a class="logo" href="index.html" aria-label="Ilyes Hamouchti, accueil">IH<span>.</span></a><p>© 2026 Ilyes Hamouchti · Portfolio personnel</p><div class="pied-liens"><a href="mentions-legales.html">Mentions légales</a><a href="#contenu">Retour en haut ↑</a></div></div></footer>
+</body>
+</html>

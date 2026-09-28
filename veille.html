@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Un carnet de veille sur React et Node.js : méthode, sources officielles, nouveautés vérifiées et pistes de pratique.">
+  <title>Veille React et Node.js — Ilyes Hamouchti</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <script src="js/theme.js?v=jour-nuit-1"></script>
+  <link rel="stylesheet" href="css/style.css?v=jour-nuit-1">
+  <link rel="stylesheet" href="css/animations.css?v=jour-nuit-1">
+  <link rel="stylesheet" href="css/theme.css?v=jour-nuit-1">
+  <script src="js/vendor/react-portfolio.js" defer></script>
+  <script src="js/animations.js?v=jour-nuit-1" defer></script>
+  <script src="js/navigation.js?v=jour-nuit-1" defer></script>
+</head>
+<body>
+  <a class="aller-contenu" href="#contenu">Aller au contenu</a>
+  <header class="entete">
+    <nav class="navigation conteneur" aria-label="Navigation principale">
+      <a class="logo" href="index.html" aria-label="Ilyes Hamouchti, accueil">IH<span>.</span></a>
+      <div class="commandes-navigation">
+        <button class="bouton-mouvement" type="button" hidden aria-label="Mettre les animations en pause">Animations Ⅱ</button>
+        <button class="menu-bouton" type="button" aria-controls="menu-principal" aria-expanded="false" hidden>Menu</button>
+      </div>
+      <ul class="liens-navigation" id="menu-principal">
+        <li><a href="index.html#a-propos">À propos</a></li>
+        <li><a href="index.html#parcours">Parcours</a></li>
+        <li><a href="index.html#competences">Compétences</a></li>
+        <li><a href="index.html#projets">Projets</a></li>
+        <li><a href="veille.html" aria-current="page">Veille</a></li>
+        <li><a href="index.html#contact">Contact <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu" class="conteneur" tabindex="-1">
+
+    <nav class="fil-ariane" aria-label="Fil d’Ariane"><a href="index.html">← Retour au portfolio</a></nav>
+    <header class="page-intro"><p class="repere">Carnet de veille / Première sélection · 16 septembre 2026</p><h1>React &amp; Node.js.<br>Comprendre les évolutions.</h1><p>Un point de départ pour suivre le développement JavaScript, vérifier ce qui change et relier ces changements aux notions étudiées en BTS SIO.</p></header>
+    <section class="section" aria-labelledby="titre-sujet">
+      <div class="intro-section"><p class="repere">01 / Le sujet</p><h2 id="titre-sujet">De l’interface<br>au serveur.</h2><p>React est une bibliothèque pour construire des interfaces avec des composants. Node.js permet d’exécuter JavaScript en dehors du navigateur, notamment pour créer un serveur.</p></div>
+      <div class="fiche-grille"><section><h3>Pourquoi suivre ces outils ?</h3><p>Ils permettent d’approfondir JavaScript et de comprendre comment une interface échange avec une application serveur. Cette veille complète l’apprentissage du HTML, du CSS, des données et de la programmation.</p></section><section><h3>Les questions suivies</h3><ul><li>Quelles nouveautés deviennent stables et lesquelles restent expérimentales ?</li><li>Comment choisir une version de Node.js encore maintenue ?</li><li>Quelles évolutions facilitent l’accessibilité ou la maintenance ?</li><li>Quel petit exemple permet de comprendre une annonce ?</li></ul></section></div>
+      <div class="encadre"><p><strong>Ce carnet commence le 16 septembre 2026.</strong> Il s’agit d’une première sélection de sources, pas de l’historique d’une veille menée depuis plusieurs mois. Les essais proposés ci-dessous restent à réaliser. Le portfolio conserve son contenu en HTML et ses animations en CSS ; React pilote la navigation et les commandes d’animation.</p></div>
+    </section>
+    <section class="section" aria-labelledby="titre-methode">
+      <div class="intro-section"><p class="repere">02 / La méthode</p><h2 id="titre-methode">Une routine simple<br>à poursuivre.</h2><p>Rythme proposé : vingt minutes chaque semaine et une synthèse lorsqu’une information apporte quelque chose de concret.</p></div>
+      <ol class="methodes"><li><strong>Rechercher à la source</strong>Lire le <a href="https://react.dev/blog">blog React</a> et le <a href="https://nodejs.org/en/blog">blog Node.js</a>. Suivre les liens vers la documentation et les dépôts officiels.</li><li><strong>Sélectionner et vérifier</strong>Repérer la date, la version concernée et le statut de stabilité. Privilégier une nouveauté compréhensible ou une information de maintenance utile.</li><li><strong>Reformuler et relier</strong>Écrire quelques phrases avec ses propres mots. Expliquer un terme nouveau et noter ce que l’information change pour un projet étudiant.</li><li><strong>Conserver et revenir dessus</strong>Ajouter une entrée dans cette page HTML avec les dates et la source. Préparer un petit essai séparé, puis compléter la fiche avec le résultat réellement observé.</li></ol>
+    </section>
+    <section class="section" aria-labelledby="titre-journal">
+      <div class="intro-section"><p class="repere">03 / Journal de lecture</p><h2 id="titre-journal">Les informations<br>retenues.</h2><p>Chaque entrée distingue les faits annoncés, leur intérêt pour la formation et une piste de mise en pratique.</p></div>
+      <!-- Pour compléter la veille, dupliquer un article et mettre à jour tous ses champs. -->
+      <article class="journal-article">
+        <div class="journal-meta"><span class="etiquette">React · Stable</span><span>Publié le 09/09/2026</span><span>Consulté le 16/09/2026</span></div>
+        <div class="journal-contenu"><h3>React 19.3 : des transitions et des références de fragments désormais stables</h3><p>React 19.3 rend stables <code>ViewTransition</code> et les références de fragments, auparavant expérimentaux. Le premier permet d’animer certains changements d’interface avec les mécanismes du navigateur. Les secondes donnent accès à un groupe d’éléments, par exemple pour déplacer le focus, sans ajouter un conteneur HTML.</p><p><strong>Intérêt pour ma formation :</strong> apprendre à vérifier le statut actuel d’une fonctionnalité. Un ancien article peut encore la présenter comme expérimentale alors qu’une version récente l’a stabilisée.</p><p><strong>À essayer :</strong> dans un exercice React séparé, comparer l’apparition d’un élément avec une transition CSS simple. Vérifier que l’animation reste facultative et que le clavier fonctionne.</p><a class="lien-texte" href="https://react.dev/blog/2026/09/09/react-19-3">Source : équipe React — React 19.3 <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <article class="journal-article">
+        <div class="journal-meta"><span class="etiquette">Node.js · LTS</span><span>Publié sur le blog le 09/09/2026</span><span>Note de version : 08/09/2026</span><span>Consulté le 16/09/2026</span></div>
+        <div class="journal-contenu"><h3>Node.js 24.21.0 : entretenir une version à support long</h3><p>Cette version de la branche LTS met notamment à jour OpenSSL, qui intervient dans les communications chiffrées, et Undici, utilisé pour des requêtes HTTP. Elle ajoute aussi des améliorations à certaines API, dont l’analyse des types MIME avec <code>MIMEType.parse</code>.</p><p><strong>Intérêt pour ma formation :</strong> comprendre qu’un environnement serveur évolue même sans changer de version majeure. Lire les notes aide à préparer une mise à jour et à savoir ce qu’il faut vérifier dans son application.</p><p><strong>À essayer :</strong> relever la version utilisée dans un petit projet Node.js, lire sa note de version, puis tester le projet après une mise à jour compatible.</p><a class="lien-texte" href="https://nodejs.org/en/blog/release/v24.21.0">Source : Node.js — version 24.21.0 LTS <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <article class="journal-article">
+        <div class="journal-meta"><span class="etiquette">Node.js · Current</span><span>Publié le 09/09/2026</span><span>Consulté le 16/09/2026</span></div>
+        <div class="journal-contenu"><h3>Node.js 26.8.2 : distinguer une version Current d’une fonctionnalité expérimentale</h3><p>La version 26.8.2 appartient à la branche Current. Sa note mentionne notamment des mises à jour d’Undici et d’OpenSSL, ainsi que la dépréciation documentée d’une méthode interne de <code>node:net</code>.</p><p><strong>Intérêt pour ma formation :</strong> « Current » désigne une phase du cycle de publication. Cela ne signifie pas que toutes les fonctions de cette version sont expérimentales. Le statut d’une API se vérifie dans sa documentation.</p><p><strong>À essayer :</strong> comparer les branches 24 et 26 sur la page officielle des versions, puis rechercher le statut d’une API utilisée dans un exercice.</p><a class="lien-texte" href="https://nodejs.org/en/blog/release/v26.8.2">Source : Node.js — version 26.8.2 Current <span aria-hidden="true">↗</span></a></div>
+      </article>
+    </section>
+    <section class="section" aria-labelledby="titre-lexique"><div class="intro-section"><p class="repere">04 / Repères</p><h2 id="titre-lexique">Quelques mots<br>pour suivre.</h2></div><dl class="lexique">
+      <div><dt>Composant</dt><dd>Une partie d’interface que l’on peut réutiliser, par exemple un bouton ou un aperçu de projet.</dd></div>
+      <div><dt>API</dt><dd>Un ensemble de fonctions ou de règles pour utiliser un outil ou échanger avec un service.</dd></div>
+      <div><dt>Stable et expérimental</dt><dd>Une fonctionnalité stable est proposée pour un usage normal selon les garanties de son projet. Une fonction expérimentale reste en évolution et peut changer.</dd></div>
+      <div><dt>LTS</dt><dd>« Long Term Support » : une branche bénéficiant d’une période de maintenance prolongée. Son calendrier doit être vérifié.</dd></div>
+      <div><dt>Current</dt><dd>La branche courante de Node.js, qui reçoit les nouveautés avant son éventuel passage en LTS.</dd></div>
+      <div><dt>Dépréciation</dt><dd>Un signal indiquant qu’un élément est déconseillé et qu’une solution de remplacement peut être nécessaire. Cela ne signifie pas toujours qu’il a déjà été supprimé.</dd></div>
+    </dl><div class="boutons"><a class="bouton" href="https://nodejs.org/en/about/previous-releases">Calendrier officiel Node.js ↗</a><a class="bouton" href="https://github.com/facebook/react/releases">Versions officielles React ↗</a></div></section>
+
+  </main>
+  <footer class="pied-page"><div class="pied-interieur conteneur"><a class="logo" href="index.html" aria-label="Ilyes Hamouchti, accueil">IH<span>.</span></a><p>© 2026 Ilyes Hamouchti · Portfolio personnel</p><div class="pied-liens"><a href="mentions-legales.html">Mentions légales</a><a href="#contenu">Retour en haut ↑</a></div></div></footer>
+</body>
+</html>

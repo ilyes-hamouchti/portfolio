@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 560" fill="none">
+  <!-- Illustration géométrique originale : quelques cercles et une orbite. -->
+  <circle cx="280" cy="280" r="212" stroke="#273747" stroke-dasharray="2 9"/>
+  <circle cx="280" cy="280" r="175" stroke="#344b60"/>
+  <circle cx="280" cy="280" r="119" fill="#111d29" stroke="#6184a2"/>
+  <path d="M280 161C218 179 204 371 280 399M280 161C341 179 355 371 280 399" stroke="#304c64"/>
+  <ellipse cx="280" cy="280" rx="119" ry="40" stroke="#304c64"/>
+  <path d="M181 216C237 242 323 242 379 216M181 344C237 318 323 318 379 344" stroke="#304c64"/>
+  <ellipse cx="280" cy="280" rx="264" ry="76" transform="rotate(-35 280 280)" stroke="#8daecb"/>
+  <circle cx="444" cy="153" r="7" fill="#c3d9ec"/>
+  <circle cx="110" cy="388" r="3" fill="#a7ccf4"/>
+  <path d="M280 32V56M268 44H292M500 330V342M494 336H506M80 123V135M74 129H86" stroke="#89a2b8"/>
+  <circle cx="421" cy="442" r="2" fill="#89a2b8"/>
+  <circle cx="137" cy="209" r="2" fill="#89a2b8"/>
+  <circle cx="335" cy="505" r="2" fill="#89a2b8"/>
+</svg>

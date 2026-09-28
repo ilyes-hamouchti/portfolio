@@ -1,0 +1,96 @@
+/* 1. Une commande accessible accompagne les mouvements continus. */
+.commandes-navigation { display: flex; align-items: center; gap: .5rem; }
+.bouton-mouvement {
+  min-height: 44px;
+  padding: .5rem .65rem;
+  border: 1px solid var(--bordure);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--texte-secondaire);
+  font: .72rem var(--police-repere);
+  white-space: nowrap;
+}
+.bouton-mouvement:hover { color: var(--texte); border-color: var(--accent); }
+
+/* 2. Sans JavaScript, l'illustration et tous les textes restent immobiles. */
+.satellite, .anneau-orbite { transform-origin: 280px 280px; }
+.animations-pretes .satellite { animation: revolution 24s linear infinite; }
+.animations-pretes .anneau-orbite { animation: revolution 100s linear infinite reverse; }
+.animations-pretes .etoiles { animation: scintillement 6s ease-in-out infinite; }
+.invitation-defiler { display: inline-block; margin-left: .3rem; }
+.animations-pretes .invitation-defiler { animation: invitation 3s ease-in-out infinite; }
+
+@keyframes revolution { to { transform: rotate(360deg); } }
+@keyframes scintillement { 50% { opacity: .45; } }
+@keyframes invitation { 50% { transform: translateY(4px); } }
+
+/* 3. Une arrivée décalée du titre, puis du texte et des liens. */
+.arrivee { animation: apparition .7s ease-out both; }
+.nom-famille.arrivee { animation-delay: .1s; }
+.accueil-description.arrivee { animation-delay: .2s; }
+.boutons.arrivee { animation-delay: .3s; }
+
+/* Le JS ajoute cette classe une seule fois, quand le bloc entre dans l'écran.
+   Aucun contenu n'est masqué en attendant le défilement. */
+.revele { animation: apparition .65s ease-out both; }
+@keyframes apparition {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.revele:focus-within,
+.accueil-texte .boutons:focus-within { animation: none; }
+
+/* 4. Les interactions accompagnent les liens et les projets. */
+.bouton { transition: background .2s, border-color .2s, transform .2s, box-shadow .2s; }
+.projet-visuel { transition: border-color .25s, box-shadow .25s; }
+.projet-visuel img { transition: transform .45s ease; }
+.competence-ligne { transition: background .25s; }
+.liens-navigation a { position: relative; }
+.liens-navigation a::after {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s ease;
+}
+.liens-navigation a:hover, .liens-navigation a:focus-visible { text-decoration: none; }
+.liens-navigation a:hover::after, .liens-navigation a:focus-visible::after,
+.liens-navigation a[aria-current]::after { transform: scaleX(1); }
+.projet-visuel:focus-visible { border-color: var(--accent); }
+
+@media (hover: hover) and (pointer: fine) {
+  .animations-pretes:not(.animations-en-pause) .bouton:hover { transform: translateY(-3px); box-shadow: 0 6px 22px #0003; }
+  .animations-pretes:not(.animations-en-pause) .projet-visuel:hover img { transform: scale(1.035); }
+  .projet-visuel:hover { border-color: var(--accent); box-shadow: 0 8px 28px #0003; }
+  .competence-ligne:hover { background: var(--surface); }
+}
+
+/* 5. Pause manuelle et arrêt lorsque l'onglet passe en arrière-plan. */
+.animations-en-pause { scroll-behavior: auto; }
+.animations-en-pause .animation-continue,
+.page-inactive .animation-continue { animation-play-state: paused; }
+.animations-en-pause .revele, .animations-en-pause .arrivee { animation: none; }
+.animations-en-pause *, .animations-en-pause *::before,
+.animations-en-pause *::after { transition: none !important; }
+.animations-en-pause .projet-visuel:hover img,
+.animations-en-pause a:hover .fleche { transform: none; }
+
+/* Respecter l'appareil par défaut ; seul le bouton peut autoriser le mouvement. */
+@media (prefers-reduced-motion: reduce) {
+  html:not(.mouvements-autorises) { scroll-behavior: auto; }
+  html:not(.mouvements-autorises) *,
+  html:not(.mouvements-autorises) *::before,
+  html:not(.mouvements-autorises) *::after { animation: none !important; transition: none !important; }
+  html:not(.mouvements-autorises) .bouton:hover,
+  html:not(.mouvements-autorises) .projet-visuel:hover img,
+  html:not(.mouvements-autorises) a:hover .fleche { transform: none !important; }
+}
+@media print {
+  .commandes-navigation { display: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

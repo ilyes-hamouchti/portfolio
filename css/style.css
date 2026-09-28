@@ -1,0 +1,222 @@
+/* 1. Les couleurs et les polices du portfolio se modifient ici. */
+:root {
+  color-scheme: dark;
+  --fond: #0b1017;
+  --surface: #111b27;
+  --surface-claire: #172330;
+  --texte: #edf1f5;
+  --texte-secondaire: #adb9c8;
+  --accent: #a7ccf4;
+  --bordure: #344150;
+  --accent-survol: #c7e2ff;
+  --texte-bouton: #0b1017;
+  --note: #f0cc97;
+  --orbite-trait: #435b70;
+  --orbite-interieur: #304c64;
+  --orbite-planete: #111d29;
+  --orbite-contour: #6184a2;
+  --orbite-anneau: #8daecb;
+  --orbite-etoile: #89a2b8;
+  --orbite-satellite: #d9ebff;
+  --police: 'Segoe UI', Arial, sans-serif;
+  --police-titre: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  --police-repere: Consolas, 'Courier New', monospace;
+  --largeur: 1160px;
+}
+
+/* 2. Base mobile : les colonnes sont ajoutées plus bas, sur écran large. */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+body { margin: 0; background: var(--fond); color: var(--texte); font-family: var(--police); line-height: 1.65; }
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+a { color: inherit; text-underline-offset: .25em; }
+button { font: inherit; }
+a, button, summary { -webkit-tap-highlight-color: transparent; }
+button, summary { cursor: pointer; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 6px; }
+::selection { background: var(--accent); color: var(--fond); }
+h1, h2, h3, p, figure { margin: 0; }
+h1, h2, h3 { font-family: var(--police-titre); line-height: 1.12; font-weight: 500; }
+h1, h2, h3, a, p { overflow-wrap: break-word; }
+h2 { font-size: clamp(2rem, 5vw, 3.6rem); letter-spacing: -.05em; }
+h3 { font-size: 1.45rem; letter-spacing: -.025em; }
+p + p { margin-top: 1rem; }
+ul { padding-left: 1.3rem; }
+li + li { margin-top: .5rem; }
+[hidden] { display: none !important; }
+.conteneur { width: min(var(--largeur), calc(100% - 40px)); margin-inline: auto; }
+.section { padding-block: 4rem; border-top: 1px solid var(--bordure); }
+.repere { font: .75rem/1.6 var(--police-repere); text-transform: uppercase; letter-spacing: .12em; color: var(--accent); }
+.texte-secondaire { color: var(--texte-secondaire); }
+.intro-section { display: grid; gap: 1rem; margin-bottom: 2.5rem; }
+.intro-section p { max-width: 40rem; color: var(--texte-secondaire); }
+.lien-texte { display: inline-flex; align-items: center; gap: .8rem; min-height: 44px; font-weight: 500; }
+.fleche { display: inline-block; transition: transform .2s ease; }
+a:hover .fleche { transform: translate(3px, -3px); }
+.boutons { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+.navigation-projets { margin-bottom: 3rem; }
+.bouton { display: inline-flex; align-items: center; justify-content: center; gap: 1.2rem; min-height: 50px; padding: .8rem 1.35rem; border: 1px solid var(--bordure); border-radius: 3px; text-decoration: none; font-size: .95rem; transition: background .2s, border-color .2s; }
+.bouton:hover { border-color: var(--accent); background: var(--surface-claire); }
+.bouton-principal { background: var(--accent); color: var(--texte-bouton); border-color: var(--accent); }
+.bouton-principal:hover { background: var(--accent-survol); color: var(--texte-bouton); }
+.aller-contenu { position: fixed; top: 8px; left: 8px; z-index: 100; padding: .75rem 1rem; background: var(--texte); color: var(--fond); transform: translateY(-160%); }
+.aller-contenu:focus { transform: translateY(0); }
+
+/* 3. Header et footer : le monogramme et les repères du premier site. */
+.entete { position: sticky; top: 0; z-index: 20; background: var(--fond); border-bottom: 1px solid var(--bordure); }
+.navigation { min-height: 76px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1.5rem; padding-block: .65rem; }
+.logo { font: 700 1.65rem var(--police-repere); text-decoration: none; letter-spacing: -.04em; padding-block: .4rem; }
+.logo span { color: var(--accent); }
+.liens-navigation { display: flex; flex-wrap: wrap; gap: .1rem 1rem; width: 100%; padding: 0; margin: 0; list-style: none; }
+.liens-navigation li { margin: 0; }
+.liens-navigation a { display: flex; align-items: center; min-height: 44px; font: .75rem var(--police-repere); color: var(--texte-secondaire); text-decoration: none; }
+.liens-navigation a:hover, .liens-navigation a[aria-current] { color: var(--texte); text-decoration: underline; }
+.menu-bouton { padding: .5rem .8rem; min-height: 44px; border: 1px solid var(--bordure); border-radius: 3px; color: var(--texte); background: transparent; font-size: .85rem; }
+.menu-bouton[aria-expanded='true'] { border-color: var(--accent); }
+.pied-page { border-top: 1px solid var(--bordure); padding-block: 2rem; }
+.pied-interieur { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; justify-content: space-between; }
+.pied-interieur p { font-size: .8rem; color: var(--texte-secondaire); }
+.pied-liens { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
+.pied-liens a { display: inline-flex; align-items: center; min-height: 44px; font-size: .8rem; }
+
+/* 4. Accueil : l'illustration orbitale est décorative et ne contient pas de texte. */
+.accueil { padding-top: 2.5rem; }
+.accueil-reperes { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; }
+.accueil-reperes p, .accueil-bas p { margin: 0; }
+.accueil-composition { position: relative; isolation: isolate; padding-block: 2.5rem 3rem; }
+.accueil h1 { font-size: clamp(3.05rem, 10.2vw, 8.3rem); letter-spacing: -.07em; line-height: .98; }
+.accueil h1 span { display: block; }
+.accueil h1 .nom-famille { color: var(--accent); }
+.accueil-texte { position: relative; z-index: 1; }
+.accueil-description { max-width: 35rem; margin-top: 1.7rem; font-size: 1.05rem; color: var(--texte-secondaire); }
+.accueil-description strong { color: var(--texte); font-weight: 500; }
+.illustration-orbite { width: min(100%, 400px); height: auto; margin: 1.5rem auto 0; }
+.accueil-bas { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem 2rem; padding-block: 1.2rem; border-top: 1px solid var(--bordure); font: .75rem/1.6 var(--police-repere); color: var(--texte-secondaire); }
+.statut { display: flex; gap: .7rem; align-items: center; }
+.statut::before { content: ''; display: block; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+
+/* 5. Profil et parcours. */
+.presentation { display: grid; gap: 2rem; }
+.portrait { max-width: 360px; }
+.portrait img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 65%; border-radius: 3px; }
+.portrait figcaption { display: flex; justify-content: space-between; gap: .8rem; padding-top: .75rem; font: .7rem var(--police-repere); color: var(--texte-secondaire); }
+.presentation-texte { max-width: 43rem; }
+.presentation-texte h2 { margin-block: .8rem 1.5rem; }
+.presentation-texte p { color: var(--texte-secondaire); }
+.note-personnelle { margin-top: 1.5rem; padding-left: 1.2rem; border-left: 2px solid var(--accent); color: var(--texte) !important; }
+.parcours-colonnes { display: grid; gap: 3rem; }
+.parcours-colonnes h3 { margin-bottom: 1.5rem; }
+.parcours-liste { margin: 0; padding: 0; list-style: none; }
+.parcours-liste li { padding-block: 1.2rem; border-top: 1px solid var(--bordure); margin: 0; }
+.parcours-liste time, .parcours-date { font: .75rem var(--police-repere); color: var(--accent); }
+.parcours-liste h4 { margin: .5rem 0 .25rem; font-size: 1.05rem; font-weight: 600; }
+.parcours-liste p { color: var(--texte-secondaire); font-size: .92rem; }
+.competences-liste { margin: 0; }
+.competence-ligne { display: grid; gap: .8rem; padding-block: 1.5rem; border-top: 1px solid var(--bordure); }
+.competence-ligne dt { font-size: 1.2rem; font-family: var(--police-titre); }
+.competence-ligne dd { margin: 0; color: var(--texte-secondaire); }
+.competence-ligne p { font-size: .85rem; margin-top: .5rem; }
+
+/* 6. Projets : de vraies captures, avec un récit séparé de l'aperçu. */
+.projet-apercu { display: grid; gap: 1.7rem; padding-block: 2.5rem; border-top: 1px solid var(--bordure); }
+.projet-apercu:first-of-type { padding-top: 0; border: 0; }
+.projet-visuel { display: block; border: 1px solid var(--bordure); background: var(--surface); border-radius: 4px; overflow: hidden; }
+.projet-visuel img { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; object-position: center; transition: transform .3s ease; }
+.projet-visuel:hover img { transform: scale(1.015); }
+.projet-description { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+.projet-description h3 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-block: .6rem 1rem; }
+.projet-description p { color: var(--texte-secondaire); }
+.technologies { display: flex; flex-wrap: wrap; gap: .5rem 1rem; padding: 0; list-style: none; font: .75rem var(--police-repere); color: var(--accent); margin-block: 1.3rem; }
+.technologies li { margin: 0; }
+.projet-guide { padding: 1.5rem; border: 1px solid var(--bordure); background: var(--surface); }
+.projet-guide h3 { margin-block: .7rem; }
+.projet-guide p { color: var(--texte-secondaire); }
+
+/* 7. Veille et contact. */
+.veille-apercu { display: grid; gap: 2rem; }
+.veille-apercu h2 { margin-block: .8rem 1.4rem; }
+.veille-apercu p { color: var(--texte-secondaire); max-width: 37rem; }
+.veille-sujets { margin: 0; padding: 0; list-style: none; }
+.veille-sujets li { display: grid; grid-template-columns: auto 1fr; gap: 1.2rem; margin: 0; padding-block: 1.4rem; border-bottom: 1px solid var(--bordure); }
+.veille-sujets span { font: .75rem var(--police-repere); color: var(--accent); padding-top: .3rem; }
+.veille-sujets strong { display: block; font-size: 1.25rem; font-weight: 500; }
+.veille-sujets p { font-size: .9rem; margin-top: .3rem; }
+.contact { padding-block: 4rem; }
+.contact h2 { max-width: 40rem; margin-block: 1rem; }
+.contact p { max-width: 35rem; color: var(--texte-secondaire); }
+.contact-liens { display: flex; flex-wrap: wrap; gap: .5rem 2rem; margin-top: 1.5rem; }
+.contact-liens a { min-height: 44px; display: inline-flex; align-items: center; gap: 1rem; }
+
+/* 8. Pages intérieures et documents. */
+.fil-ariane { display: flex; flex-wrap: wrap; gap: .5rem; padding-block: 1.3rem; color: var(--texte-secondaire); font-size: .85rem; }
+.fil-ariane a { min-height: 44px; display: inline-flex; align-items: center; }
+.page-intro { padding-block: 1.3rem 3rem; }
+.page-intro h1 { font-size: clamp(2.7rem, 7vw, 5.4rem); letter-spacing: -.065em; margin-block: 1rem 1.4rem; max-width: 54rem; }
+.page-intro > p:last-child { max-width: 45rem; color: var(--texte-secondaire); font-size: 1.1rem; }
+.grand-visuel { border: 1px solid var(--bordure); border-radius: 4px; overflow: hidden; margin-bottom: 2.5rem; background: var(--surface); }
+.grand-visuel img { width: 100%; }
+.grand-visuel figcaption { padding: .8rem 1rem; font-size: .8rem; color: var(--texte-secondaire); }
+.fiche-grille { display: grid; gap: 2rem; }
+.fiche-grille h2, .texte-long h2 { font-size: 1.8rem; margin-bottom: 1rem; letter-spacing: -.03em; }
+.fiche-grille p, .fiche-grille li, .texte-long p, .texte-long li { color: var(--texte-secondaire); }
+.fiche-grille > section { padding-top: 1.5rem; border-top: 1px solid var(--bordure); }
+.texte-long { max-width: 49rem; }
+.texte-long section { margin-block: 2.5rem; }
+.encadre { padding: 1.25rem; border-left: 2px solid var(--accent); background: var(--surface); margin-block: 1.5rem; }
+.encadre p { font-size: .95rem; }
+.brouillon { color: var(--note) !important; }
+.methodes { counter-reset: etape; list-style: none; padding: 0; display: grid; gap: 1.5rem; }
+.methodes li { counter-increment: etape; margin: 0; padding-top: 1rem; border-top: 1px solid var(--bordure); }
+.methodes li::before { content: '0' counter(etape); display: block; color: var(--accent); font: .8rem var(--police-repere); margin-bottom: .7rem; }
+.methodes strong { display: block; margin-bottom: .4rem; }
+.journal-article { padding-block: 2rem; border-top: 1px solid var(--bordure); display: grid; gap: 1rem; }
+.journal-meta { font: .75rem/1.8 var(--police-repere); color: var(--texte-secondaire); }
+.journal-meta span { display: block; }
+.etiquette { display: inline-block !important; padding: .25rem .6rem; margin-bottom: .7rem; color: var(--accent); border: 1px solid var(--bordure); border-radius: 3px; }
+.journal-contenu h3 { margin-bottom: 1rem; }
+.journal-contenu p { color: var(--texte-secondaire); }
+.journal-contenu strong { color: var(--texte); font-weight: 500; }
+.journal-contenu a { overflow-wrap: anywhere; }
+.lexique { display: grid; gap: 1.2rem; }
+.lexique dt { color: var(--texte); font-weight: 600; }
+.lexique dd { margin: .3rem 0 0; color: var(--texte-secondaire); }
+
+/* 9. Tablettes puis ordinateurs : le contenu conserve son ordre de lecture. */
+@media (min-width: 700px) {
+  .conteneur { width: min(var(--largeur), calc(100% - 72px)); }
+  .section { padding-block: 5.5rem; }
+  .presentation { grid-template-columns: 1fr 1.5fr; align-items: center; gap: 3rem; }
+  .parcours-colonnes { grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .competence-ligne { grid-template-columns: 1fr 2fr; gap: 2rem; }
+  .projet-apercu { grid-template-columns: 1.2fr 1fr; align-items: center; gap: 2.5rem; }
+  .veille-apercu { grid-template-columns: 1.1fr 1fr; gap: 3rem; }
+  .fiche-grille { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+  .methodes { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .journal-article { grid-template-columns: 170px 1fr; gap: 2rem; }
+  .lexique { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+@media (min-width: 960px) {
+  .navigation { flex-wrap: nowrap; min-height: 84px; }
+  .liens-navigation { width: auto; gap: 1.6rem; }
+  .menu-bouton { display: none; }
+  .accueil { padding-top: 2.2rem; }
+  .accueil-composition { min-height: 575px; display: flex; align-items: center; padding-block: 3.5rem; }
+  .accueil h1 { font-size: clamp(5.5rem, 9vw, 8rem); }
+  .illustration-orbite { position: absolute; z-index: -1; width: 46%; max-width: 550px; right: -1rem; top: 2.5rem; margin: 0; }
+  .accueil-description { max-width: 31rem; }
+  .presentation { gap: 5.5rem; grid-template-columns: 1fr 1.8fr; }
+  .projet-apercu { gap: 4.5rem; grid-template-columns: 1.3fr 1fr; padding-block: 3.5rem; }
+  .intro-section { grid-template-columns: 1.2fr 1fr; align-items: end; gap: 3rem; }
+  .intro-section .repere { grid-column: 1 / -1; }
+  .contact { padding-block: 5.5rem; }
+}
+
+/* Les préférences de mouvement sont traitées dans animations.css. */
+@media print {
+  :root { color-scheme: light; --fond: #fff; --texte: #111; --texte-secondaire: #333; --accent: #23476f; --bordure: #999; }
+  .entete { position: static; }
+  .illustration-orbite, .menu-bouton, .aller-contenu { display: none; }
+  .section { padding-block: 2rem; }
+  a { text-decoration: underline; }
+}

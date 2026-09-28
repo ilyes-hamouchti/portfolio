@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Le portfolio d’Ilyes Hamouchti, étudiant en deuxième année de BTS SIO à l’IPSSI. Projets web, parcours et veille sur React et Node.js.">
+  <title>Ilyes Hamouchti — Portfolio BTS SIO</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <script src="js/theme.js?v=jour-nuit-1"></script>
+  <link rel="stylesheet" href="css/style.css?v=jour-nuit-1">
+  <link rel="stylesheet" href="css/animations.css?v=jour-nuit-1">
+  <link rel="stylesheet" href="css/theme.css?v=jour-nuit-1">
+  <script src="js/vendor/react-portfolio.js" defer></script>
+  <script src="js/animations.js?v=jour-nuit-1" defer></script>
+  <script src="js/navigation.js?v=jour-nuit-1" defer></script>
+</head>
+
+<body>
+  <a class="aller-contenu" href="#contenu">Aller au contenu</a>
+  <header class="entete">
+    <nav class="navigation conteneur" aria-label="Navigation principale">
+      <a class="logo" href="index.html" aria-label="Ilyes Hamouchti, accueil">IH<span>.</span></a>
+      <div class="commandes-navigation">
+        <button class="bouton-mouvement" type="button" hidden aria-label="Mettre les animations en pause">Animations
+          Ⅱ</button>
+        <button class="menu-bouton" type="button" aria-controls="menu-principal" aria-expanded="false"
+          hidden>Menu</button>
+      </div>
+      <ul class="liens-navigation" id="menu-principal">
+        <li><a href="#a-propos">À propos</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="#contact">Contact <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu" tabindex="-1">
+    <section class="accueil conteneur" aria-labelledby="titre-accueil">
+      <div class="accueil-reperes">
+        <p class="repere">Portfolio personnel</p>
+        <p class="repere">BTS SIO · IPSSI · 2025—2027</p>
+      </div>
+      <div class="accueil-composition">
+        <div class="accueil-texte">
+          <h1 id="titre-accueil"><span>Ilyes</span><span class="nom-famille">Hamouchti.</span></h1>
+          <p class="accueil-description"><strong>Étudiant en deuxième année de BTS SIO à l’IPSSI.</strong> Je
+            m’intéresse au développement web, de la construction d’une interface à la logique qui la fait fonctionner.
+          </p>
+          <div class="boutons">
+            <a class="bouton bouton-principal" href="#projets">Découvrir mes projets <span class="fleche"
+                aria-hidden="true">↗</span></a>
+            <a class="bouton" href="#cv">Mon CV <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <!-- Illustration décorative : les groupes SVG tournent grâce au CSS. -->
+        <svg class="illustration-orbite" viewBox="0 0 560 560" width="560" height="560" fill="none" aria-hidden="true"
+          focusable="false">
+          <circle class="anneau-orbite animation-continue" cx="280" cy="280" r="212" stroke="var(--orbite-trait)"
+            stroke-dasharray="2 9" />
+          <circle cx="280" cy="280" r="175" stroke="var(--orbite-trait)" />
+          <circle cx="280" cy="280" r="119" fill="var(--orbite-planete)" stroke="var(--orbite-contour)" />
+          <path d="M280 161C218 179 204 371 280 399M280 161C341 179 355 371 280 399" stroke="var(--orbite-interieur)" />
+          <ellipse cx="280" cy="280" rx="119" ry="40" stroke="var(--orbite-interieur)" />
+          <path d="M181 216C237 242 323 242 379 216M181 344C237 318 323 318 379 344" stroke="var(--orbite-interieur)" />
+          <ellipse cx="280" cy="280" rx="264" ry="76" transform="rotate(-35 280 280)" stroke="var(--orbite-anneau)" />
+          <g class="satellite animation-continue">
+            <path d="M454 159A212 212 0 0 0 420 121" stroke="var(--accent)" stroke-width="2" />
+            <circle cx="454" cy="159" r="13" fill="var(--accent)" fill-opacity=".09" />
+            <circle cx="454" cy="159" r="5" fill="var(--orbite-satellite)" />
+          </g>
+          <g class="etoiles animation-continue" stroke="var(--orbite-etoile)">
+            <path d="M280 32V56M268 44H292M500 330V342M494 336H506M80 123V135M74 129H86" />
+            <circle cx="421" cy="442" r="2" fill="var(--orbite-etoile)" />
+            <circle cx="137" cy="209" r="2" fill="var(--orbite-etoile)" />
+            <circle cx="335" cy="505" r="2" fill="var(--orbite-etoile)" />
+          </g>
+        </svg>
+      </div>
+      <div class="accueil-bas">
+        <p class="statut">Alternance trouvée</p>
+        <p>Développement &amp; apprentissage</p>
+        <a href="#a-propos">Faire connaissance <span class="invitation-defiler animation-continue"
+            aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section class="section" id="a-propos" aria-labelledby="titre-presentation">
+      <div class="presentation conteneur">
+        <figure class="portrait">
+          <img src="assets/images/ilyes-hamouchti.jpeg" alt="Portrait d’Ilyes Hamouchti" width="2316" height="3088"
+            loading="lazy">
+          <figcaption><span>ILYES HAMOUCHTI</span><span>01 / PROFIL</span></figcaption>
+        </figure>
+        <div class="presentation-texte">
+          <p class="repere">01 / À propos</p>
+          <h2 id="titre-presentation">De la curiosité<br>aux premiers projets.</h2>
+          <p>Mon parcours m’a conduit des études de STAPS au support à l’action managériale, puis à l’informatique.
+            Aujourd’hui, je poursuis un BTS Services informatiques aux organisations à l’IPSSI.</p>
+          <p>J’aime voir une page prendre forme et comprendre comment une action produit un résultat : organiser le
+            contenu, travailler la mise en page, puis ajouter les interactions utiles. Ce portfolio rassemble des
+            projets réalisés pendant mon apprentissage.</p>
+          <p class="note-personnelle">L’animation de groupes et l’encadrement m’ont aussi appris à communiquer,
+            organiser des activités et travailler avec les autres. En dehors de l’informatique, je m’intéresse au sport
+            et aux voyages.</p>
+          <div class="encadre" id="cv">
+            <p><strong>Mon CV IPSSI</strong></p>
+            <a href="./assets/images/HAMOUCHTI-Ilyes-cv (3) (1).pdf" target="_blank" rel="noopener noreferrer">Ouvrir le
+              CV</a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section conteneur" id="parcours" aria-labelledby="titre-parcours">
+      <div class="intro-section">
+        <p class="repere">02 / Parcours</p>
+        <h2 id="titre-parcours">Les étapes<br>de mon parcours.</h2>
+        <p>Une formation en informatique, un premier stage web et des expériences au contact des autres.</p>
+      </div>
+      <div class="parcours-colonnes">
+        <div>
+          <h3>Formation</h3>
+          <ol class="parcours-liste">
+            <li><span class="parcours-date">2025 — 2027 · EN COURS</span>
+              <h4>BTS SIO · IPSSI</h4>
+              <p>Services informatiques aux organisations. Deuxième année.</p>
+            </li>
+            <li><span class="parcours-date">2024 — 2025</span>
+              <h4>BTS Support à l’action managériale</h4>
+              <p>Institut Supérieur Clorivière, Paris.</p>
+            </li>
+            <li><span class="parcours-date">2023 — 2024</span>
+              <h4>Première année de licence STAPS</h4>
+              <p>Parcours kinésithérapie, Université Sorbonne Paris Nord, campus de Bobigny.</p>
+            </li>
+            <li><span class="parcours-date">2023</span>
+              <h4>Baccalauréat STMG</h4>
+              <p>Option ressources humaines, lycée Andrée Boulloche.</p>
+            </li>
+          </ol>
+        </div>
+        <div>
+          <h3>Expériences</h3>
+          <ol class="parcours-liste">
+            <!-- Ajouter ici l'alternance après confirmation de l'entreprise, des dates et des missions. -->
+            <li><span class="parcours-date">SEPTEMBRE 2026 — JUILLET 2027</span>
+              <h4>Gestionnaire processus gestion de parc, en alternance</h4>
+              <p>La Poste, Siège social, Paris 15e (Lemnys) · Modélisation et cartographie de processus, analyse de
+                performance et amélioration continue, rédaction de procédures et documentation opérationnelle, veille et
+                déploiement d'outils de gestion, conduite du changement et coordination avec les parties prenantes,
+                rigueur, autonomie et sens de l'organisation.
+              </p>
+            </li>
+            <li><span class="parcours-date">MAI — JUIN 2026</span>
+              <h4>Stage en développement front-end</h4>
+              <p>Gringer · Travail sur une page présentant des exemples de sites WordPress, CMS et HTML/CSS/JavaScript.
+              </p>
+            </li>
+            <li><span class="parcours-date">JUIN — AOÛT 2024</span>
+              <h4>Direction et assistant sanitaire</h4>
+              <p>VELS · Coordination d’équipe, organisation des activités, sécurité et suivi du bien-être des
+                participants.</p>
+            </li>
+            <li><span class="parcours-date">2024</span>
+              <h4>Stage en ressources humaines</h4>
+              <p>Ateliers municipaux de Livry-Gargan · Suivi administratif, planification et préparation de documents
+                fournisseurs.</p>
+            </li>
+            <li><span class="parcours-date">2020 — 2022</span>
+              <h4>Vente et accueil</h4>
+              <p>Marché local / Vels Aujourd’hui · Accueil, tenue du stand, caisse et présentation des produits.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section conteneur" id="competences" aria-labelledby="titre-competences">
+      <div class="intro-section">
+        <p class="repere">03 / Compétences</p>
+        <h2 id="titre-competences">Ma boîte à outils.</h2>
+        <p>Les technologies et les outils abordés dans mon parcours. Je continue à les pratiquer et à progresser au fil
+          des projets.</p>
+      </div>
+      <dl class="competences-liste">
+        <div class="competence-ligne">
+          <dt>Développement web</dt>
+          <dd>HTML · CSS · JavaScript · PHP<p>Structurer des pages, travailler leur présentation et programmer des
+              interactions.</p>
+          </dd>
+        </div>
+        <div class="competence-ligne">
+          <dt>Données et modélisation</dt>
+          <dd>SQL · MySQL · phpMyAdmin · Merise</dd>
+        </div>
+        <div class="competence-ligne">
+          <dt>Outils de travail</dt>
+          <dd>Git &amp; GitHub · Visual Studio · draw.io · JIRA · Microsoft Project</dd>
+        </div>
+        <div class="competence-ligne">
+          <dt>Technologies suivies</dt>
+          <dd>React · Node.js<p>Deux sujets de ma veille pour mieux comprendre les applications JavaScript, côté
+              interface et côté serveur.</p>
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="section conteneur" id="projets" aria-labelledby="titre-projets">
+      <div class="intro-section">
+        <p class="repere">04 / Réalisations</p>
+        <h2 id="titre-projets">Quelques<br>réalisations.</h2>
+        <p>Le contexte, le fonctionnement et les choix derrière mes réalisations, avec des aperçus des interfaces.</p>
+      </div>
+      <article class="projet-apercu">
+        <a class="projet-visuel" href="projet-simmu-impot.html" aria-label="Découvrir le projet Simmu-Impôt"><img
+            src="assets/images/simmu-impot.png"
+            alt="Interface de Simmu-Impôt : saisie du salaire et du nombre de parts fiscales" width="1265" height="712"
+            loading="lazy"></a>
+        <div class="projet-description">
+          <p class="repere">01 / Application web</p>
+          <h3>Simmu-Impôt</h3>
+          <p>Un exercice de simulation d’impôt : saisir un revenu, choisir le nombre de parts et afficher le détail d’un
+            calcul progressif dans le navigateur.</p>
+          <ul class="technologies" aria-label="Technologies">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul><a class="lien-texte" href="projet-simmu-impot.html">Voir le projet en détail <span class="fleche"
+              aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      <article class="projet-apercu">
+        <a class="projet-visuel" href="projet-eyes-contact.html" aria-label="Découvrir le projet EYE’s.Contact"><img
+            src="assets/images/eyes-contact.png"
+            alt="Page d’accueil du site scolaire EYE’s.Contact, consacré à des lentilles connectées fictives"
+            width="1250" height="650" loading="lazy"></a>
+        <div class="projet-description">
+          <p class="repere">02 / Projet de formation</p>
+          <h3>EYE’s.Contact</h3>
+          <p>Un site de présentation pour une entreprise fictive de lentilles connectées. Un travail sur la structure
+            d’une page et la mise en valeur d’un concept de produit.</p>
+          <ul class="technologies" aria-label="Technologies observées">
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul><a class="lien-texte" href="projet-eyes-contact.html">Voir le projet en détail <span class="fleche"
+              aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      <!-- Le guide Gringer pourra être ajouté après confirmation de la contribution personnelle. -->
+    </section>
+
+    <section class="section" aria-labelledby="titre-veille">
+      <div class="veille-apercu conteneur">
+        <div>
+          <p class="repere">05 / Veille technologique</p>
+          <h2 id="titre-veille">Comprendre ce qui<br>évolue dans le web.</h2>
+          <p>React et Node.js : deux sujets pour découvrir comment se construisent les applications JavaScript. Ce
+            carnet rassemble une première sélection de sources officielles, consultées le 16 septembre 2026.</p><a
+            class="lien-texte" href="veille.html">Lire le carnet de veille <span class="fleche"
+              aria-hidden="true">↗</span></a>
+        </div>
+        <ul class="veille-sujets">
+          <li><span>01</span>
+            <div><strong>React</strong>
+              <p>Évolution des interfaces, nouveautés stables et fonctions encore expérimentales.</p>
+            </div>
+          </li>
+          <li><span>02</span>
+            <div><strong>Node.js</strong>
+              <p>Exécution de JavaScript, versions maintenues et lecture des mises à jour.</p>
+            </div>
+          </li>
+          <li><span>03</span>
+            <div><strong>Une méthode à poursuivre</strong>
+              <p>Rechercher, vérifier, reformuler et conserver une trace utile.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact conteneur" id="contact" aria-labelledby="titre-contact">
+      <p class="repere">06 / Contact</p>
+      <h2 id="titre-contact">Une question sur<br>mon parcours ou un projet ?</h2>
+      <p>Retrouvez mon code sur GitHub. Les liens de contact seront finalisés avec mes coordonnées confirmées.</p>
+      <div class="contact-liens">
+        <a href="https://github.com/ilyes-hamouchti">GitHub <span class="fleche" aria-hidden="true">↗</span></a>
+        <a href="mailto:ilyes.hamouchti@gmail.com">📧 Mail<span class="fleche" aria-hidden="true">↗</span></a>
+        <a href="https://www.linkedin.com/in/ilyes-hamouchti/">💼 LinkedIn <span class="fleche"
+            aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="pied-page">
+    <div class="pied-interieur conteneur"><a class="logo" href="index.html"
+        aria-label="Ilyes Hamouchti, accueil">IH<span>.</span></a>
+      <p>© 2026 Ilyes Hamouchti · Portfolio personnel</p>
+      <div class="pied-liens"><a href="mentions-legales.html">Mentions légales</a><a href="#contenu">Retour en haut
+          ↑</a></div>
+    </div>
+  </footer>
+</body>
+
+</html>

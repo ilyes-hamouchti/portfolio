@@ -1,0 +1,71 @@
+/* La palette nuit est définie dans style.css. Seules les couleurs changent. */
+:root[data-theme='jour'] {
+  color-scheme: light;
+  --fond: #f4f7fb;
+  --surface: #e9eff6;
+  --surface-claire: #dfe8f2;
+  --texte: #172b40;
+  --texte-secondaire: #43586c;
+  --accent: #285886;
+  --bordure: #b7c7d8;
+  --accent-survol: #1d4165;
+  --texte-bouton: #f4f7fb;
+  --note: #785019;
+  --orbite-trait: #8da4ba;
+  --orbite-interieur: #9cb3c8;
+  --orbite-planete: #e4edf6;
+  --orbite-contour: #6a8aaa;
+  --orbite-anneau: #456e94;
+  --orbite-etoile: #587d9e;
+  --orbite-satellite: #285886;
+}
+
+.bouton-theme {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  color: var(--accent);
+  background: var(--surface);
+  border: 1px solid var(--bordure);
+  border-radius: 50%;
+}
+.bouton-theme:hover { background: var(--surface-claire); border-color: var(--accent); }
+.icone-theme { width: 22px; height: 22px; overflow: visible; }
+.icone-soleil, .icone-lune {
+  transform-origin: 12px 12px;
+  transition: opacity .75s ease, transform .75s ease;
+}
+.icone-lune { opacity: 0; transform: rotate(-70deg) scale(.5); }
+[data-theme='jour'] .icone-soleil { opacity: 0; transform: rotate(90deg) scale(.5); }
+[data-theme='jour'] .icone-lune { opacity: 1; transform: rotate(0) scale(1); }
+
+/* Pendant 800 ms, le fond, les textes et l'orbite passent progressivement
+   à leurs nouvelles couleurs. Aucun déplacement du contenu n'est ajouté. */
+:root.theme-transition:not(.animations-en-pause) :where(*:not(.aller-contenu), *::before, *::after) {
+  transition-property: background-color, color, border-color, outline-color, fill, stroke, box-shadow, opacity, transform !important;
+  transition-duration: .8s !important;
+  transition-timing-function: ease-in-out !important;
+  transition-delay: 0s !important;
+}
+
+/* Trois commandes restent utilisables sur les petits téléphones. */
+.symbole-mouvement { display: none; }
+@media (max-width: 479px) {
+  .bouton-mouvement { width: 44px; min-width: 44px; padding: .5rem; }
+  .libelle-mouvement { display: none; }
+  .symbole-mouvement { display: inline; font-size: 1rem; }
+}
+
+@media print {
+  :root[data-theme] {
+    color-scheme: light;
+    --fond: #fff; --surface: #fff; --surface-claire: #eee;
+    --texte: #111; --texte-secondaire: #333; --accent: #23476f;
+    --texte-bouton: #fff; --note: #785019; --bordure: #999;
+  }
+  :root.theme-transition * { transition: none !important; }
+}
